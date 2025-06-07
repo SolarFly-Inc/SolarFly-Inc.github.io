@@ -160,21 +160,25 @@
                     </div>
                 </div>
                 <div class="contato-form">
-                    <form action="#" method="POST">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeRGRhliTSHN2Ss8SdmX-24M_rDEmJx21-GXoc8ddcGYitS8Q/formResponse" method="POST" target="_blank">
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" required>
+                            <input type="text" id="nome" name="entry.1028634962" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="entry.1569112460" required>
                         </div>
                         <div class="form-group">
                             <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                            <textarea id="mensagem" name="entry.1068583873" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
                     </form>
+                    <div id="form-success" style="display: none; color: #27ae60; margin-top: 15px; text-align: center;">
+                        <i class="fas fa-check-circle" style="font-size: 24px;"></i>
+                        <p>Mensagem enviada com sucesso! Entraremos em contato em breve.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -209,6 +213,24 @@
             menuIcon.addEventListener('click', function() {
                 menu.classList.toggle('active');
                 menuIcon.classList.toggle('active');
+            });
+        });
+    </script>
+
+
+    <!-- Script para exibir mensagem de sucesso após envio do formulário -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contato-form form');
+            const formSuccess = document.getElementById('form-success');
+            
+            form.addEventListener('submit', function(e) {
+                // Não interrompe o envio para o Google Forms
+                // Apenas mostra a mensagem de sucesso após um pequeno delay
+                setTimeout(function() {
+                    form.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                }, 1000);
             });
         });
     </script>

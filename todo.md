@@ -41,6 +41,6 @@
 - [x] Realizar ajustes finais
 
 ## Fase 6: Entregar o site completo ao usuário
-- [ ] Preparar arquivos finais
-- [ ] Entregar o site completo ao usuário
+- [x] Preparar arquivos finais
+- [x] Entregar o site completo ao usuário
 
